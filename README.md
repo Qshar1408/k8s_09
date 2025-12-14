@@ -31,7 +31,7 @@
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_001.png)
 
-![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/src)
+Cкрипты terraform [Cкрипты terraform](https://github.com/Qshar1408/k8s_09/blob/main/src)
 
 
 
