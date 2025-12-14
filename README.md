@@ -55,7 +55,7 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 2.3. Установка containerd:
 
-     - Установка зависимостей:
+     * Установка зависимостей:
   
 ```bash
 sudo apt install -y containerd
@@ -65,7 +65,7 @@ sudo apt install -y containerd
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_004.png)
 
-     - Создание конфигурации для containerd:
+     * Создание конфигурации для containerd:
      
 ```bash
 sudo mkdir -p /etc/containerd
@@ -169,19 +169,20 @@ EOF
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_012.png)
 
 4.3. Настройка kubectl для пользователя qshar:
+
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-4.4. Настраиваем CNI (Calico)
+4.4. Настраиваю CNI (Calico)
 
 ```bash
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
 
-4.5. Убеждаемся, что master нода в состоянии Ready:
+4.5. Убеждаюсь, что master нода в состоянии Ready:
 
 ```bash
 kubectl get nodes
@@ -190,11 +191,11 @@ kubectl get nodes
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_013.png)
 
 
-4.6. Далее, переходим на каждую из нод, и присоединяем их к мастер-ноде
+4.6. Далее, перехожу на каждую из нод, и присоединяю их к мастер-ноде
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_014.png)
 
-4.7.Проверяем на мастер-ноде доступность:
+4.7.Проверяю на мастер-ноде доступность:
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_015.png)
 
@@ -212,7 +213,7 @@ kubectl get csr
 kubectl get csr -o name | xargs kubectl certificate approve
 ```
 
-4.9. Проверяем на мастер-ноде доступность:
+4.9. Проверяю на мастер-ноде доступность:
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_016.png)
 
