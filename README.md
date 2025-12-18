@@ -147,10 +147,11 @@ sudo kubeadm init --cri-socket /run/containerd/containerd.sock --control-plane-e
 
 4.2. По окончании init видим вывод с инструкциями, включая команду join для воркеров, сохраните ее. Пример:
 
-```
+```bash
 kubeadm join [IP]:6443 --token XXXXX --discovery-token-ca-cert-hash sha256:XXXXX
 ```
 
+```bash
 cat > ~/.kube/config << 'EOF'
 apiVersion: v1
 clusters:
@@ -168,6 +169,7 @@ kind: Config
 preferences: {}
 users: []
 EOF
+```
 
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_012.png)
 
