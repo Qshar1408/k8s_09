@@ -98,7 +98,10 @@ sudo apt install -y apt-transport-https ca-certificates curl gpg
 ![k8s_09](https://github.com/Qshar1408/k8s_09/blob/main/img/k8s_09_007.png)
 
 3.2. Добавляю GPG ключ
+
+```bash
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+```
 
 3.3. Добавляю репозиторий
 
